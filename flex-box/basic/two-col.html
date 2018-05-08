@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Creating Two Equal Height Columns Using CSS</title>
+<style type="text/css">
+
+body {
+	margin: 0px;
+	padding: 0px;	
+}
+
+.flex-container{
+	width: 100%;
+	/*height: 100%;*/
+	/*min-height: 300px;*/
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */		
+	display: flex; /* Standard syntax */
+	flex-flow: row;
+}
+.flex-container .column{
+	padding: 0px;
+	background: #dbdfe5;
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+}
+.flex-container .column.bg-alt{
+	background: #b4bac0;
+	list-style: none;
+		  
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -ms-flexbox;
+		  display: -webkit-flex;
+		  display: flex;
+		  
+		  -webkit-flex-flow: row wrap;
+		  justify-content: space-around;
+}
+.basic-box {
+		  background: lightgray;
+		  padding: 5px;
+		  width: 200px;
+		  /*height: 200px;*/
+		  margin-top: 10px;
+		  
+		  line-height: 150px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 3em;
+		  text-align: center;		  
+		 /* border-color: black;
+		  border-style: solid;*/
+		}
+.flex-container .column.left-col{
+	width: 0px;
+}
+</style>
+</head>
+<body>
+    <div class="flex-container">    	
+        <div class="column left-col">
+        	<div class="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Contact</a></li>				
+				</ul>
+			</div>
+        </div>
+        <div class="column bg-alt">
+        	
+        	<div class="basic-box">1</div>
+				<div class="basic-box">2</div>
+				<div class="basic-box">3</div>
+				<div class="basic-box">4</div>
+				<div class="basic-box">5</div>
+				<div class="basic-box">6</div>
+				<div class="basic-box">7</div>
+				<div class="basic-box">8</div>
+				<div class="basic-box">9</div>
+				<div class="basic-box">10</div>
+				<div class="basic-box">11</div>
+				<div class="basic-box">12</div>
+
+        </div>
+    </div>
+</body>
+</html>   

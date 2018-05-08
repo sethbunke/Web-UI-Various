@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	/*box-sizing: border-box;*/
+	margin: 0;
+	paddin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #d5dae5;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+	display: flex;
+	/*flex-flow: row wrap;*/
+	flex-flow: row wrap;
+
+	height: 600px;
+	justify-content: space-around;
+	
+}
+
+.basic-box {
+	flex-basis: 300px;
+	height: 300px;
+	border-color: black;
+	border-style: solid;
+}
