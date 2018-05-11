@@ -1,0 +1,80 @@
+header {
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 50%);
+    float: left;
+  }
+
+  header .main-nav li {
+    list-style-type: none;
+    display: inline-block; /* display: inline-block will display the list as inline but with the ability to set width and height as a block element */
+  }
+
+  header .main-nav li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'built_titling', Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding: 0px 15px;
+  }
+
+  header .main-nav, header .right-nav{
+    height: 70px;
+    float: left;
+    margin: 0;
+    padding: 0px 15px;
+    line-height: 70px;
+  }
+  
+  header .right-nav {
+    float: right;
+  }
+
+
+  header .main-nav li, header .right-nav li {
+    list-style-type: none;
+    display: inline-block;
+  }
+  
+  header .main-nav li a, header .right-nav li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'built_titling', Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding: 0px 15px;
+  }
+
+
+
+
+
+  /* header .main-nav {
+    height: 70px;
+    float: left;
+    margin: 0;
+    padding: 0px 15px;
+    line-height: 70px;
+  }
+
+  header .right-nav {
+    height: 70px;
+    float: right;
+    margin: 0;
+    padding: 0px 15px;
+    line-height: 70px;
+  } */
+
+  /* header .main-nav, header .right-nav{
+    height: 70px;
+    float: left;
+    margin: 0;
+    padding: 0px 15px;
+    line-height: 70px;
+  }
+  
+  header .right-nav {
+    float: right;
+  } */
