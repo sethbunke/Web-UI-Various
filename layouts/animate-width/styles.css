@@ -1,0 +1,29 @@
+/* @import "compass/css3";
+
+html {
+  background: #292a2b;
+	color: #FFF;
+}
+.container {
+  display: flex
+}
+.right-div {
+  background: green;
+  width: 100%;
+}
+
+// =========================================
+// Width Animation Demo
+// =========================================
+
+.animating-width {
+  background: #e78629;
+  color: white;
+  height: 100px;
+  width: 10%;
+  @include transition(.3s width ease-in-out); // the transition effect for hover
+  &:hover {
+    cursor: pointer;
+    width: 100%; // animating to full width on hover
+  }
+} */
