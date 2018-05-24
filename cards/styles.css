@@ -1,0 +1,86 @@
+/*
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,800");
+*/
+body {
+  background: linear-gradient(#aab,#ffa);
+  min-height: 100vh;
+  padding: 5vw;
+  font-family: 'Roboto', Arial;
+}
+
+.card {
+  display: inline-block;
+  margin: 15px;
+  font-size: 14px;
+  padding: 5px 100px 25px 30px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.75);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  width: calc(33.3% - 180px);
+  min-height: 140px;
+  background: rgba(255,255,255,0.15);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M1 3h1v1H1V3zm2-2h1v1H3V1z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+.card h1 {
+  position: absolute;
+  left: calc(100% - 200px);
+  top: -30px;
+  font-size: 80px;
+  transform: rotate(-35deg);
+  color: rgba(0,0,0,0.07);
+  text-shadow: none;
+}
+
+.card img.bg {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.card h2 {
+  color: rgba(0,0,0,0.35);
+  font-weight: 800;
+  font-size: 28px;
+  margin: 10px 0px 8px -2px;
+  text-shadow: none;
+}
+
+.card h2 svg {
+  height: 25px;
+  vertical-align: -2px;
+  opacity: 0.3;
+}
+.card .el {
+  vertical-align: -2px;
+  opacity: 0.3;
+  margin-left: -5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {  
+    width: calc(50% - 170px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {  
+    width: calc(100% - 160px);
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #123;
+  border-radius:10px;
+}

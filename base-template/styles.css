@@ -1,0 +1,12 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	/*box-sizing: border-box;*/
+	margin: 0;
+	paddin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #d5dae5;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}

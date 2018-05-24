@@ -1,0 +1,168 @@
+<html>
+<!--This is our HTML main tag-->
+
+<head>
+    <!--This is our head tag where we put our title and script and all infos relative to our page.-->
+    <title>My Page Title</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <div id="gauge1" class="gauge-container">
+        <span class="label">DEFAULT</span>
+    </div>
+    
+    <div class="wrapper">
+      <div id="gauge2" class="gauge-container two">
+        <span class="label">.two</span>
+      </div>
+    </div>
+    
+    <div id="gauge3" class="gauge-container three">
+      <span class="label">.three</span>
+    </div>
+    
+    <div id="gauge4" class="gauge-container four">
+      <span class="label">.four</span>
+      <span class="value-text">km/hr</span>
+    </div>
+    
+    <div id="gauge5" class="gauge-container five">
+      <span class="label">.five</span>
+    </div>
+    
+    <div id="gauge6" class="gauge-container six">
+      <span class="label">.six</span>
+    </div>
+    
+    <div id="gauge7" class="gauge-container seven">
+      <span class="label">.seven</span>
+    </div>
+    
+    <div class="info">
+      Grab yours at <a class="link" href="https://github.com/naikus/svg-gauge" target="_blank">https://github.com/naikus/svg-gauge</a> Fork and star :D OR <pre>npm install svg-gauge</pre>
+    </div>
+    
+    <div class="info">
+      New feature! Change dial colors for different values. 
+      
+      <p class="warn">
+      WARNING!! Some breaking changes: Gauge now uses a viewbox of 100x100 instead of previous 1000x1000. So all style stroke and font values need to be adjusted. (divide by 10)
+      </p>
+     
+      
+      <p>
+        Also check out my tiny mobile framework/view manager for building simple SPAs
+        <a target="_blank" href="https://codepen.io/naikus/pen/PKgPyN" class="link">
+          https://codepen.io/naikus/pen/PKgPyN
+        </a>
+      </p>
+    </div>
+    
+    <script src="gauge.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var gauge1 = Gauge(
+  document.getElementById("gauge1"), {
+    max: 100,
+    dialStartAngle: -90,
+    dialEndAngle: -90.001,
+    value: 100,
+    label: function(value) {
+      return Math.round(value * 100) / 100;
+    }
+  }
+);
+
+var gauge2 = Gauge(
+  document.getElementById("gauge2"), {
+    min: -50,
+    max: 50,
+    dialStartAngle: 180,
+    dialEndAngle: 0,
+    value: 50,
+     color: function(value) {
+        if(value < -25) {
+          return "#5ee432";
+        }else if(value < 0) {
+          return "#fffa50";
+        }else if(value < 25) {
+          return "#f7aa38";
+        }else {
+          return "#ef4655";
+        }
+      }
+  }
+);
+
+var gauge3 = Gauge(
+  document.getElementById("gauge3"), {
+    max: 100,
+    value: 50
+  }
+);
+
+var gauge4 = Gauge(
+  document.getElementById("gauge4"), {
+    max: 30000,
+    dialStartAngle: 90,
+    dialEndAngle: 0,
+    value: 50
+  }
+);
+
+var gauge5 = Gauge(
+  document.getElementById("gauge5"), {
+    max: 200,
+    dialStartAngle: 0,
+    dialEndAngle: -180,
+    value: 50
+  }
+);
+
+var gauge6 = Gauge(
+  document.getElementById("gauge6"), {
+    max: 100,
+    dialStartAngle: 90.01,
+    dialEndAngle: 89.99,
+    dialRadius: 10,
+    showValue: false,
+    value: 50
+  }
+);
+
+
+var gauge7 = Gauge(
+  document.getElementById("gauge7"), {
+    max: 100,
+    dialStartAngle: -90,
+    dialEndAngle: -90.001,
+    value: 100,
+    showValue: false,
+    label: function(value) {
+      return Math.round(value * 100) / 100;
+    }
+  }
+);
+        (function loop() {
+            var value1 = Math.random() * 100,
+                value2 = Math.random() * 100,
+                value3 = Math.random() * 100,
+                value4 = Math.random() * 100,
+                value5 = Math.random() * 100;
+
+            //setValueAnimated(value, durationInSecs);
+            gauge1.setValueAnimated(value1, 1);
+            gauge2.setValueAnimated(50 - value2, 2);
+            gauge3.setValueAnimated(value3, 1.5);
+            gauge4.setValueAnimated(value4 * 300, 2);
+            gauge5.setValueAnimated(value5 * 2, 1);
+            gauge6.setValueAnimated(value1, 1);
+            gauge7.setValueAnimated(value1, 1);
+            window.setTimeout(loop, 6000);
+            })();
+    </script>
+</body>
+
+</html>
