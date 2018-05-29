@@ -27,3 +27,46 @@ html {
     width: 100%; // animating to full width on hover
   }
 } */
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background: #292a2b;
+  color: #FFF;  
+}
+.container {
+  display: flex
+}
+.right-div {
+  background: green;
+  width: 100%;
+}
+
+.animating-width {
+  background: #e78629;
+  color: white;
+  height: 100px;
+  width: 10%;
+  transition:.3s width ease-in-out;
+} 
+
+.animating-width:hover {
+  cursor: pointer;
+  width: 100%;
+} 
+
+
+/* .animating-width {
+  overflow: hidden;
+  max-width: 100px;
+  -webkit-transition: max-width .5s ease;
+  transition: max-width .5s ease;
+}
+
+.widget:hover {
+  max-width: 200px;
+} */
