@@ -274,3 +274,24 @@ footer .main-nav li a, footer .right-nav li a {
 }
 
 /* END FOOTER SECTION */
+
+/* MEDIA QUERIES SECTION */
+
+/* Tablet Styles */
+@media only screen and (max-width: 1024px) {
+  header {
+    display: none;
+  }
+} 
+
+/* Large Mobile Styles */
+@media only screen and (max-width: 768px) {
+  
+} 
+
+/* Small Mobile Styles */
+@media only screen and (max-width: 400px) {
+  
+} 
+
+/* END MEDIA QUERIES SECTION */
